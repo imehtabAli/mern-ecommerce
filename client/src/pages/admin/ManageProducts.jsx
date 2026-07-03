@@ -15,7 +15,7 @@ const ManageProducts = () => {
 
     const fetchProducts = async () => {
         try {
-            const response = await axiosInstance.get('/products');
+            const response = await axiosInstance.get('/products?limit=100');
             setProducts(response.data.products);
         } catch (err) {
             console.error(err);
